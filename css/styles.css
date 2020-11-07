@@ -1,7 +1,10 @@
 body{
-    width: 30%;
     margin: auto;
+    background-image: url("../img/slots.jpg");
     background-color: #f7f7f7;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 img{
@@ -10,6 +13,9 @@ img{
 }
 
 .machine{
+    background-color: white;
+    margin: auto;
+    width: 30%;
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
     overflow: hidden;
