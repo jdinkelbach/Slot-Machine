@@ -1,7 +1,7 @@
 body{
     height: 100vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-image: url("../img/slots.jpg");
@@ -17,10 +17,10 @@ img{
 }
 
 .machine{
+    font-family: 'Oswald', sans-serif;
     display: block;
     background-color: white;
     width: 35%;
-    font-family: 'Oswald', sans-serif;
     font-weight: 700;
     overflow: hidden;
     border-radius: 5px;
@@ -44,4 +44,9 @@ img{
     text-transform: uppercase;
     background-color: #FF3434;
     color: white;
+}
+
+#sources{
+    color:#f7f7f7;
+    font-family: arial, 'san-serif';
 }
