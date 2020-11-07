@@ -63,13 +63,15 @@ function isWinner(){
 // Won turn
 function won(){
     playerMoney += (bet * 2);
-    $("#message").html("you won $" + bet * 2);
+    $("#message").html("You won $" + bet * 2);
+    $("#message").css('color', '#5cb85c');
 }
 
 // Lost turn
 function lost(){
     playerMoney -= bet;
-    $("#message").html("you lost $" + bet);
+    $("#message").html("You lost $" + bet);
+    $("#message").css('color', '#AA2323');
 }
 
 // Disables spin button
