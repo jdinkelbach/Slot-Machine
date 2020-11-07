@@ -6,6 +6,14 @@ var imgs = ["img/cherries.png", "img/bar.png", "img/7.png"]
 var slots = [];
 let betAmount = $("#betAmount");
 
+playBackgroundMusic();
+
+// plays background music
+function playSound(url){
+    const audio = new Audio(url);
+    audio.play();
+}
+
 // Generate random image ('cherries' || 'bar' || '7')
 function RandomImg(){
     return imgs[Math.floor(Math.random() * imgs.length)];
@@ -94,9 +102,24 @@ function updateMoney(){
     $("#playerMoney").html("$" + playerMoney);
 }
 
+// Plays spin sound effect
+function playSpinSFX(){
+    var spinSFX = new Audio("audio/spin.wav");
+    spinSFX.play();
+}
+
+// Plays ambient background music
+function playBackgroundMusic(){
+    var backgroundMusic = new Audio("audio/casino.wav");
+    backgroundMusic.volume = 0.2;
+    backgroundMusic.loop = true;
+    backgroundMusic.play();   
+}
+
 
 // Spin Listener
 $("#spin").on("click", function(){
+    playSpinSFX();
     spin();
 })
 
