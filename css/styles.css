@@ -50,3 +50,8 @@ img{
     color:#f7f7f7;
     font-family: arial, 'san-serif';
 }
+
+#input-custom{
+    border-radius: 5px;
+    height: 100%;
+}

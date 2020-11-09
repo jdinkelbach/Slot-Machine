@@ -22,7 +22,7 @@ function RandomImg(){
 // Spins
 function spin(){
     // Only spin if bet has been chosen
-    if ($("#spin").hasClass("disabled")){
+    if (bet > playerMoney || bet === 0) {
         return;
     }
     generateSlots();
@@ -49,9 +49,6 @@ function updateSlots(){
 // Reset Turn
 function resetTurn(){
     slots = [];
-    bet = 0;
-    updateBet();
-    disableSpin();
 }
 
 // Checks for 3 matching images
@@ -80,16 +77,6 @@ function lost(){
     playerMoney -= bet;
     $("#message").html("You lost $" + bet);
     $("#message").css('color', '#AA2323');
-}
-
-// Disables spin button
-function disableSpin(){
-    $("#spin").addClass("disabled");
-}
-
-// Enables spin button
-function enableSpin(){
-    $("#spin").removeClass("disabled");
 }
 
 // Update bet amount
@@ -127,29 +114,22 @@ $("#spin").on("click", function(){
 $("#bet-1").on("click", function(){
     bet = 1;
     updateBet();
-    enableSpin()
 });
 
 $("#bet-5").on("click", function(){
     bet = 5;
     updateBet();
-    enableSpin()
 });
 
 $("#bet-10").on("click", function(){
     bet = 10;
     updateBet();
-    enableSpin()
 });
 
-$("#bet-15").on("click", function(){
-    bet = 15;
+$("#bet-custom").on("click", function(){
+    if (bet > playerMoney){
+        return;
+    }
+    bet = $("#input-custom").val();
     updateBet();
-    enableSpin();
-});
-
-$("#bet-20").on("click", function(){
-    bet = 20;
-    updateBet();
-    enableSpin()
 });
