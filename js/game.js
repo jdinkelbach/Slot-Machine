@@ -6,7 +6,10 @@ var imgs = ["img/cherries.png", "img/bar.png", "img/7.png"]
 var slots = [];
 let betAmount = $("#betAmount");
 
-playBackgroundMusic();
+// Play background music when page loads
+window.onload = function(){
+    playBackgroundMusic();
+}
 
 // plays background music
 function playSound(url){
@@ -25,6 +28,7 @@ function spin(){
     if (bet > playerMoney || bet === 0) {
         return;
     }
+    playSpinSFX();
     generateSlots();
     updateSlots();
     console.log(slots);
@@ -106,7 +110,6 @@ function playBackgroundMusic(){
 
 // Spin Listener
 $("#spin").on("click", function(){
-    playSpinSFX();
     spin();
 })
 
