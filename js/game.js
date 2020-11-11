@@ -95,7 +95,7 @@ function updateMoney(){
 
 // Plays spin sound effect
 function playSpinSFX(){
-    var spinSFX = new Audio("audio/spin.wav");
+    var spinSFX = new Audio("audio/spin.mp3");
     spinSFX.play();
 }
 
