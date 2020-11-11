@@ -25,15 +25,21 @@ function RandomImg(){
 // Spins
 function spin(){
     // Only spin if bet has been chosen
-    if (bet > playerMoney || bet === 0) {
-        return;
+    if (bet > playerMoney) {
+        $("#bet-message").html("You do not have enough money!");
     }
-    playSpinSFX();
-    generateSlots();
-    updateSlots();
-    console.log(slots);
-    isWinner();
-    resetTurn();
+    else if (bet <= 0){
+        $("#bet-message").html("You cannot bet that ammount");
+    }
+    else{
+        $("#bet-message").html("");
+        playSpinSFX();
+        generateSlots();
+        updateSlots();
+        console.log(slots);
+        isWinner();
+        resetTurn();
+    }
 }
 
 // Generate three random slots

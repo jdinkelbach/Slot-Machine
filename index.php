@@ -29,7 +29,7 @@
                 </div>
             </div>
             <h5 class>Current Bet: <span id="betAmount">$0</span></h5>
-            <div class="bets d-flex justify-content-around my-4">
+            <div class="bets d-flex justify-content-around my-3">
                 <button id="bet-1" type="button" class="btn btn-info">$1</button>
                 <button id="bet-5" type="button" class="btn btn-info">$5</button>
                 <button id="bet-10" type="button" class="btn btn-info">$10</button>
@@ -38,6 +38,7 @@
                     <button id="bet-custom" type="button" class="btn btn-info ml-2 mr-0">Bet</button>
                 </div>
             </div>
+            <h5 id="bet-message" class="mb-3"></h5>
             <button id="spin" type="button" class="btn btn mb-3 px-4">Spin</button>
         </div>
         <div id="sources" class="mt-2">Images: engfto.com, Benoit Dare<br> SFX: Daniel Simion, Stephan Schutze.</div>
